@@ -3971,7 +3971,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
 17570 do 17571 j=j1,j2                                                     2836
       i=jp(j)                                                              2837
       w(i)=e(i)*(b-e(i)*c)                                                 2837
-      if(w(i) .gt. 0.0)goto 17591                                          2837
+      goto 17591                                                           2837
       jerr=-30000                                                          2837
       return                                                               2837
 17591 continue                                                             2838
