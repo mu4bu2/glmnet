@@ -3556,7 +3556,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
 16741 continue                                                             2634
       vq=max(0d0,vp)                                                       2634
       vq=vq*ni/sum(vq)                                                     2635
-      ww=max(0d0,w)                                                        2635
+      ww=w                                                                 2635
       sw=sum(ww)                                                           2636
       if(sw .gt. 0.0)goto 16761                                            2636
       jerr=9999                                                            2636
@@ -3673,7 +3673,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
       dev0=rr                                                              2712
 16890 do 16891 i=1,no                                                      2712
       if((y(i) .ge. t0) .and. (q(i) .gt. 0.0))goto 16911                   2712
-      w(i)=0.0                                                             2712
+      w(i)=q(i)                                                            2712
       wr(i)=w(i)                                                           2712
 16911 continue                                                             2712
 16891 continue                                                             2713
@@ -3882,7 +3882,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
       call psort7(y,jp,1,no)                                               2806
       nj=0                                                                 2806
 17370 do 17371 j=1,no                                                      2806
-      if(q(jp(j)).le.0.0)goto 17371                                        2806
+      if(q(jp(j)).eq.0.0)goto 17371                                        2806
       nj=nj+1                                                              2806
       jp(nj)=jp(j)                                                         2806
 17371 continue                                                             2807
@@ -4057,7 +4057,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
       if(jerr.ne.0) go to 12180                                            2899
       allocate(xm(1:ni),stat=jerr)                                         2900
       if(jerr.ne.0) go to 12180                                            2901
-      q=max(0d0,w)                                                         2901
+      q=w                                                                  2901
       sw=sum(q)                                                            2902
       if(sw .gt. 0.0)goto 17651                                            2902
       jerr=9999                                                            2902
