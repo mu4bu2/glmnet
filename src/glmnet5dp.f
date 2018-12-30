@@ -3882,7 +3882,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
       call psort7(y,jp,1,no)                                               2806
       nj=0                                                                 2806
 17370 do 17371 j=1,no                                                      2806
-      if(q(jp(j)).eq.0.0)goto 17371                                        2806
+      if(q(jp(j)).le.0.0)goto 17371                                        2806
       nj=nj+1                                                              2806
       jp(nj)=jp(j)                                                         2806
 17371 continue                                                             2807
