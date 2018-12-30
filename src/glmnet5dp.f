@@ -3673,7 +3673,7 @@ c     mortran 2.0     (version of 7/04/75 mod 7/4/87 (ajc))
       dev0=rr                                                              2712
 16890 do 16891 i=1,no                                                      2712
       if((y(i) .ge. t0) .and. (q(i) .gt. 0.0))goto 16911                   2712
-      w(i)=q(i)                                                            2712
+      w(i)=0.0                                                             2712
       wr(i)=w(i)                                                           2712
 16911 continue                                                             2712
 16891 continue                                                             2713
