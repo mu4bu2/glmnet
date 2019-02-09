@@ -31,7 +31,7 @@ coxnet=function(x,is.sparse,ix,jx,y,weights,offset,alpha,nobs,nvars,jd,vp,cl,ne,
   if(errmsg$fatal)stop(errmsg$msg,call.=FALSE)
   else warning(errmsg$msg,call.=FALSE)
 }
-  outlist=getcoef(fit,nvars,nx,vnames)
+  outlist=my_getcoef(fit,nvars,nx,vnames)
   dev=fit$dev[seq(fit$lmu)]
 outlist=c(outlist,list(dev.ratio=dev,nulldev=fit$nulldev,npasses=fit$nlp,jerr=fit$jerr,offset=is.offset))
 class(outlist)="coxnet"
